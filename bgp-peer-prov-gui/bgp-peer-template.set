@@ -1,0 +1,7 @@
+set protocols bgp group {{ v4_group_name }} neighbor {{ ipv4 }} description {{ name }}
+set protocols bgp group {{ v4_group_name }} neighbor {{ ipv4 }} family inet unicast prefix-limit maximum {{ pl4 }}
+set protocols bgp group {{ v4_group_name }} neighbor {{ ipv4 }} peer-as {{ asn }}
+set protocols bgp group {{ v6_group_name }} neighbor {{ ipv6 }} description { name }}
+set protocols bgp group {{ v6_group_name }} neighbor {{ ipv6 }} family inet6 unicast prefix-limit maximum {{ pl6 }}
+set protocols bgp group {{ v6_group_name }} neighbor {{ ipv6 }} peer-as {{ asn }}
+set policy-options as-path-group {{ as_path_name }} as-path as-{{ asn }}-{{ name }} "{{ asn }}{1,} .{1,10}"
