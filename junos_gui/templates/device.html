@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body %}
+<body>
+    <h2>Juniper Automation tool<br></h2>
+    Please select a device you would like to modify:<br>
+    <form name="devices" action="." method='POST'>
+    	<select name="device">
+    		{% for device in devices %}
+    		<option value={{device}}>{{device}}</option>
+   			{% endfor %}
+   		</select>
+   		<button type="submit">select</button>
+   		</form>
+   		<br>
+</body>
+</html>
+{% endblock %}

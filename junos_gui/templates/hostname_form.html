@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body %}
+<body>
+    <h2>Set new hostname</h2>
+    <form action="hostname" method="POST">
+        <input type="text" name="hostname">
+        <input type="submit" name="submit" value="submit">
+    </form>
+    <br>
+    Current Hostname: <b>{{ hostname }}</b>
+
+</body>
+</html>
+{% endblock %}

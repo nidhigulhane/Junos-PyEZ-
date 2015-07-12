@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body %}
+<body>
+    <h2>send raw set commands to Juniper device</h2>
+    <form action="commander" method="POST">
+        <textarea name="commands"rows="10" cols="70" placeholder="enter your commands here..."></textarea>
+        <br>
+        <input type="submit" name="submit" value="submit">
+    </form>
+</body>
+</html>
+{% endblock %}
