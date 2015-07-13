@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body %}
+<body>
+    <h2>Commit Configuration</h2>
+    <form action="commit" method="POST">
+        <input type="submit" name="commit" value="commit">
+    </form>
+    {% if output %}
+    <pre>
+    {{ output }}
+    </pre>
+    <form action="commit" method="POST">
+        <input type="submit" name="confirm" value="confirm">
+    </form>
+    {% endif %}
+</body>
+</html>
+{% endblock %}
